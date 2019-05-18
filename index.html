@@ -1,579 +1,903 @@
-<style>
-@import url(https://fonts.googleapis.com/css?family=Varela+Round);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-*, *::after, *::before {
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  line-height: 1.5em;
-}
-
-a {
-  color: #66cc99;
-  text-decoration: none;
-}
-
-.clearfix::after, .clearfix::before {
-  content: " ";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-.bold {
-  color: #4a4e51;
-  font-weight: 400;
-}
-
-.resume-wrapper {
-  position: relative;
-  text-align: center;
-  height: 100%;
-}
-
-.container {
-  min-height: 600px;
-}
-
-.profile {
-  background: #fff;
-  width: 40%;
-  float: left;
-  color: #9099a0;
-}
-@media (max-width: 850px) {
-  .profile {
-    width: 100%;
-  }
-}
-.profile .name-wrapper {
-  float: left;
-  width: 60%;
-}
-.profile h1 {
-  font-size: 2.5em;
-  text-align: left;
-  font-family: "Varela Round", sans-serif;
-  color: #4a4e51;
-  text-transform: uppercase;
-  line-height: 1em;
-  padding-top: 40px;
-}
-@media (max-width: 1200px) {
-  .profile h1 {
-    padding-top: 20px;
-  }
-}
-@media (max-width: 450px) {
-  .profile h1 {
-    font-size: 1.8em;
-    padding-top: 20px;
-  }
-}
-.profile li {
-  margin-bottom: 10px;
-}
-.profile .picture-resume-wrapper {
-  width: 40%;
-  display: block;
-  float: left;
-}
-@media (max-width: 1200px) {
-  .profile .picture-resume-wrapper {
-    width: 100%;
-  }
-}
-.profile .picture-resume {
-  width: 220px;
-  height: 220px;
-  background-size: cover;
-  border-radius: 50%;
-  margin-right: 0px;
-  display: table;
-  position: relative;
-  vertical-align: middle;
-}
-.profile .picture-resume span {
-  display: table-cell;
-  vertical-align: middle;
-  position: relative;
-  margin: 0 auto;
-  z-index: 10;
-  text-align: center;
-}
-.profile .picture-resume img {
-  border-radius: 50%;
-  width: 130px;
-}
-@media (max-width: 1500px) {
-  .profile .picture-resume img {
-    width: 80px;
-  }
-}
-@media (max-width: 1200px) {
-  .profile .picture-resume img {
-    width: 120px;
-    height: 120px;
-  }
-}
-@media (max-width: 1500px) {
-  .profile .picture-resume {
-    width: 150px;
-    height: 150px;
-  }
-}
-@media (max-width: 1200px) {
-  .profile .picture-resume {
-    width: 200px;
-    height: 200px;
-  }
-}
-@media (max-width: 450px) {
-  .profile .picture-resume {
-    width: 180px;
-    height: 180px;
-  }
-}
-.profile .contact-info {
-  margin-top: 100px;
-  font-weight: 300;
-}
-@media (max-width: 1200px) {
-  .profile .contact-info {
-    margin-top: 70px;
-  }
-}
-@media (max-width: 450px) {
-  .profile .contact-info {
-    margin-top: 50px;
-  }
-}
-.profile .list-titles {
-  float: left;
-  text-align: left;
-  font-weight: 600;
-  width: 40%;
-  color: #4a4e51;
-}
-.profile .list-content {
-  float: left;
-  width: 60%;
-  text-align: left;
-  font-weight: 300;
-}
-.profile .contact-presentation {
-  text-align: left;
-  font-weight: 300;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-@media (max-width: 1200px) {
-  .profile .contact-presentation {
-    margin-top: 70px;
-    margin-bottom: 70px;
-  }
-}
-@media (max-width: 850px) {
-  .profile .contact-presentation {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-}
-.profile svg {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.profile .st0, .profile .st1 {
-  fill: #66cc99;
-}
-
-.experience {
-  background: #3d3e42;
-  width: 60%;
-  float: left;
-  position: relative;
-  color: #9099a0;
-  font-weight: 300;
-  min-height: 100%;
-  min-height: 100vh;
-}
-@media (max-width: 850px) {
-  .experience {
-    width: 100%;
-  }
-}
-.experience h3.experience-title {
-  color: #66cc99;
-  text-align: left;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-.experience .company-wrapper {
-  width: 30%;
-  float: left;
-  text-align: left;
-  padding-right: 5%;
-  margin-bottom: 60px;
-}
-@media (max-width: 450px) {
-  .experience .company-wrapper {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-.experience .job-wrapper {
-  width: 70%;
-  float: left;
-  text-align: left;
-  padding-right: 5%;
-  margin-bottom: 60px;
-}
-@media (max-width: 450px) {
-  .experience .job-wrapper {
-    width: 100%;
-    margin-bottom: 40px;
-  }
-}
-.experience .experience-title {
-  color: white;
-  margin-bottom: 15px;
-}
-
-.section-padding {
-  padding: 60px 60px 40px 40px;
-}
-@media (max-width: 850px) {
-  .section-padding {
-    padding: 80px 15% 40px 10%;
-  }
-}
-@media (max-width: 450px) {
-  .section-padding {
-    padding: 40px 10% 20px 5%;
-  }
-}
-
-.section-wrapper {
-  width: 50%;
-  float: left;
-  text-align: left;
-  color: #9099a0;
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-@media (max-width: 450px) {
-  .section-wrapper {
-    width: 100%;
-  }
-}
-.section-wrapper:nth-child(3) {
-  padding-right: 8%;
-}
-.section-wrapper h3.section-title {
-  color: #66cc99;
-  text-align: left;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-.section-wrapper .skill-percentage {
-  margin-bottom: 10px;
-  position: relative;
-}
-.section-wrapper .skill-percentage::after {
-  content: "";
-  width: 100%;
-  height: 6px;
-  background: #4a4e51;
-  display: block;
-  margin-top: 3px;
-}
-.section-wrapper .skill-percentage::before {
-  content: "";
-  height: 6px;
-  background: #66cc99;
-  position: absolute;
-  margin-top: 3px;
-  bottom: 0;
-}
-.section-wrapper .skill-percentage:nth-child(1)::before {
-  width: 80%;
-  animation: skill_1 0.6s ease;
-}
-.section-wrapper .skill-percentage:nth-child(2)::before {
-  width: 90%;
-  animation: skill_2 0.6s ease;
-}
-.section-wrapper .skill-percentage:nth-child(3)::before {
-  width: 50%;
-  animation: skill_3 0.6s ease;
-}
-.section-wrapper .skill-percentage:nth-child(4)::before {
-  width: 60%;
-  animation: skill_4 0.6s ease;
-}
-.section-wrapper .skill-percentage:nth-child(5)::before {
-  width: 70%;
-  animation: skill_5 0.6s ease;
-}
-.section-wrapper .skill-percentage:nth-child(6)::before {
-  width: 70%;
-  animation: skill_6 0.6s ease;
-}
-.section-wrapper .skill-percentage:nth-child(7)::before {
-  width: 70%;
-  animation: skill_6 0.6s ease;
-}
-
-@keyframes skill_1 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 80%;
-  }
-}
-@keyframes skill_2 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 90%;
-  }
-}
-@keyframes skill_3 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 50%;
-  }
-}
-@keyframes skill_4 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 60%;
-  }
-}
-@keyframes skill_5 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 70%;
-  }
-}
-@keyframes skill_6 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 70%;
-  }
-}
-@keyframes skill_7 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 70%;
-  }
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://eunicejoung.com/ -->
+<html data-semplice="4.4.1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>Hoang Tung</title>
+<link rel="dns-prefetch" href="http://eunicejoung.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+		<script type="text/javascript" async="" src="./Eunice Joung_files/analytics.js"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/eunicejoung.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Eunice Joung_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
 }
 </style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<div class="resume-wrapper">
-	<section class="profile section-padding">
-		<div class="container">
-			<div class="picture-resume-wrapper">
-        <div class="picture-resume">
-        <span><img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" alt="" /></span>
-        <svg version="1.1" viewBox="0 0 350 350">
-  
-  <defs>
-    <filter id="goo">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm" />
-    </filter>
-  </defs>
-  
-  
-<g filter="url(#goo)" >  
-  
-  <circle id="main_circle" class="st0" cx="171.5" cy="175.6" r="130"/>
-  
-  <circle id="circle" class="bubble0 st1" cx="171.5" cy="175.6" r="122.7"/>
-  <circle id="circle" class="bubble1 st1" cx="171.5" cy="175.6" r="122.7"/>
-  <circle id="circle" class="bubble2 st1" cx="171.5" cy="175.6" r="122.7"/>
-  <circle id="circle" class="bubble3 st1" cx="171.5" cy="175.6" r="122.7"/>
-  <circle id="circle" class="bubble4 st1" cx="171.5" cy="175.6" r="122.7"/>
-  <circle id="circle" class="bubble5 st1" cx="171.5" cy="175.6" r="122.7"/>
-  <circle id="circle" class="bubble6 st1" cx="171.5" cy="175.6" r="122.7"/>
-  <circle id="circle" class="bubble7 st1" cx="171.5" cy="175.6" r="122.7"/>
-  <circle id="circle" class="bubble8 st1" cx="171.5" cy="175.6" r="122.7"/>
-  <circle id="circle" class="bubble9 st1" cx="171.5" cy="175.6" r="122.7"/>
-  <circle id="circle" class="bubble10 st1" cx="171.5" cy="175.6" r="122.7"/>
-
-</g>  
-</svg>
-      </div>
-         <div class="clearfix"></div>
- </div>
-      <div class="name-wrapper">
-        <h1>John Anderson</h1><!-- YOUR NAME AND LAST NAME  -->
-      </div>
-      <div class="clearfix"></div>
-      <div class="contact-info clearfix">
-      	<ul class="list-titles">
-      		<li>Call</li>
-      		<li>Mail</li>
-      		<li>Web</li>
-      		<li>Home</li>
-      	</ul>
-        <ul class="list-content ">
-        	<li>+34 123 456 789</li> <!-- YOUR PHONE NUMBER  -->
-        	<li>j.anderson@gmail.com</li> <!-- YOUR EMAIL -->
-        	<li><a href="#">janderson.com</a></li> <!-- YOUR WEBSITE  -->
-        	<li>Los Angeles, CA</li> <!-- YOUR STATE AND COUNTRY  -->
-        </ul>
-      </div>
-      <div class="contact-presentation"> <!-- YOUR PRESENTATION RESUME  -->
-      	<p><span class="bold">Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod congue nisi, nec consequat quam. In consectetur faucibus turpis eget laoreet. Sed nec imperdiet purus. </p>
-      </div>
-      <div class="contact-social clearfix">
-      	<ul class="list-titles">
-      		<li>Twitter</li>
-      		<li>Dribbble</li>
-      		<li>Codepen</li>
-      	</ul>
-        <ul class="list-content"> <!-- REMEMBER TO PUT THE URL ON THE HREF TAG  -->
-      		<li><a href="">@janderson</a></li> <!-- YOUR TWITTER USER  -->
-      		<li><a href="">janderson</a></li> <!-- YOUR DRIBBBLE USER  -->
-      		<li><a href="">janderson</a></li> <!-- YOUR BEHANCE USER  -->
-      	</ul>
-      </div>
-		</div>
-	</section>
-  
-  <section class="experience section-padding">
-  	<div class="container">
-  		<h3 class="experience-title">Experience</h3>
-      
-      <div class="experience-wrapper">
-      	<div class="company-wrapper clearfix">
-      		<div class="experience-title">Company name</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
-          <div class="time">Nov 2012 - Present</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
-      	</div>
-        
-        <div class="job-wrapper clearfix">
-        	<div class="experience-title">Front End Developer </div> <!-- JOB TITLE  -->
-          <div class="company-description">
-          	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo in, dignissim magna.</p>  <!-- JOB DESCRIPTION  -->
-          </div>
-        </div>
-        
-        <div class="company-wrapper clearfix">
-      		<div class="experience-title">Company name</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
-          <div class="time">Nov 2010 - Present</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
-      	</div>
-        
-         <div class="job-wrapper clearfix">
-        	<div class="experience-title">Freelance, Web Designer / Web Developer</div> <!-- JOB TITLE  -->
-          <div class="company-description">
-          	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo in, dignissim magna.</p>  <!-- JOB DESCRIPTION  -->
-          </div>
-        </div>
-        
-        <div class="company-wrapper clearfix">
-      		<div class="experience-title">Company name</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
-          <div class="time">Nov 2009 - Nov 2010</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
-      	</div> 
-        
-         <div class="job-wrapper clearfix">
-        	<div class="experience-title">Web Designer </div> <!-- JOB TITLE  -->
-          <div class="company-description">
-          	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo in, dignissim magna.</p>   <!-- JOB DESCRIPTION  -->
-          </div>
-        </div>
-        
-      </div><!--Skill experience-->
-      
-      <div class="section-wrapper clearfix">
-      	<h3 class="section-title">Skills</h3>  <!-- YOUR SET OF SKILLS  -->
-        	<ul>
-        		<li class="skill-percentage">HTML / HTML5</li>
-        		<li class="skill-percentage">CSS / CSS3 / SASS / LESS</li>
-        		<li class="skill-percentage">Javascript</li>
-        		<li class="skill-percentage">Jquery</li>
-        		<li class="skill-percentage">Wordpress</li>
-        		<li class="skill-percentage">Photoshop</li>
-            
-        	</ul>
-        
-      </div>
-      
-      <div class="section-wrapper clearfix">
-        <h3 class="section-title">Hobbies</h3>  <!-- DESCRIPTION OF YOUR HOBBIES -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo in, dignissim magna.</p>
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo in, dignissim magna.</p> 
-      </div>
-      
-  	</div>
-  </section>
-  
-  <div class="clearfix"></div>
-</div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-<script>
-// Some code thanks to @chrisgannon
-
-var select = function(s) {
-  return document.querySelector(s);
-}
-
-function randomBetween(min,max)
-{
-    var number = Math.floor(Math.random()*(max-min+1)+min);
-  
-    if ( number !== 0 ){
-      return number;
-    }else {
-      return 0.5;
-    }
-}
-
-var tl = new TimelineMax();
-
-for(var i = 0; i < 20; i++){
-
-  var t = TweenMax.to(select('.bubble' + i), randomBetween(1, 1.5), {
-    x: randomBetween(12, 15) * (randomBetween(-1, 1)),
-    y: randomBetween(12, 15) * (randomBetween(-1, 1)), 
-    repeat:-1,
-    repeatDelay:randomBetween(0.2, 0.5),
-    yoyo:true,
-    ease:Elastic.easeOut.config(1, 0.5)
-  })
-
-  tl.add(t, (i+1)/0.6)
-}
-
-tl.seek(50);
+	<link rel="stylesheet" id="wp-block-library-css" href="./Eunice Joung_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="semplice-stylesheet-css" href="./Eunice Joung_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="semplice-frontend-stylesheet-css" href="./Eunice Joung_files/frontend.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="mediaelement-css" href="./Eunice Joung_files/mediaelementplayer-legacy.min.css" type="text/css" media="all">
+<script type="text/javascript" src="./Eunice Joung_files/jquery.js"></script>
+<script type="text/javascript" src="./Eunice Joung_files/jquery-migrate.min.js"></script>
+<script type="text/javascript">
+var mejsL10n = {"language":"en","strings":{"mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen-off":"Turn off Fullscreen","mejs.fullscreen-on":"Go Fullscreen","mejs.download-video":"Download Video","mejs.fullscreen":"Fullscreen","mejs.time-jump-forward":["Jump forward 1 second","Jump forward %1 seconds"],"mejs.loop":"Toggle Loop","mejs.play":"Play","mejs.pause":"Pause","mejs.close":"Close","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.time-skip-back":["Skip back 1 second","Skip back %1 seconds"],"mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.mute-toggle":"Mute Toggle","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.ad-skip":"Skip ad","mejs.ad-skip-info":["Skip in 1 second","Skip in %1 seconds"],"mejs.source-chooser":"Source Chooser","mejs.stop":"Stop","mejs.speed-rate":"Speed Rate","mejs.live-broadcast":"Live Broadcast","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
 </script>
+<script type="text/javascript" src="./Eunice Joung_files/mediaelement-and-player.min.js"></script>
+<script type="text/javascript" src="./Eunice Joung_files/mediaelement-migrate.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script>
+<link rel="https://api.w.org/" href="http://eunicejoung.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://eunicejoung.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://eunicejoung.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.1.1">
+<link rel="canonical" href="http://eunicejoung.com/">
+<link rel="shortlink" href="http://eunicejoung.com/">
+<link rel="alternate" type="application/json+oembed" href="http://eunicejoung.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Feunicejoung.com%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://eunicejoung.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Feunicejoung.com%2F&amp;format=xml">
+<link rel="stylesheet" type="text/css" href="./Eunice Joung_files/fonts.css">
+<style type="text/css" id="semplice-webfonts-css">.font_5y69yg8hi, [data-font="font_5y69yg8hi"], [data-font="font_5y69yg8hi"] li a, #content-holder p, #content-holder li {font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;font-weight: 400;font-style: normal;}.font_c71j63d86, [data-font="font_c71j63d86"], [data-font="font_c71j63d86"] li a, #content-holder h5 {font-family: "Gotham A", "Gotham B", sans-serif;font-weight: 500;font-style: normal;}.font_9egbh93i6, [data-font="font_9egbh93i6"], [data-font="font_9egbh93i6"] li a, #content-holder h1, #content-holder h2, #content-holder h3 {font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;font-weight: 400;font-style: normal;}.font_onqb3q1i4, [data-font="font_onqb3q1i4"], [data-font="font_onqb3q1i4"] li a {font-family: "Gotham A", "Gotham B", sans-serif;font-weight: 500;font-style: normal;}.font_lluaq62se, [data-font="font_lluaq62se"], [data-font="font_lluaq62se"] li a {font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;font-weight: 600;font-style: normal;}.font_xn07vecsh, [data-font="font_xn07vecsh"], [data-font="font_xn07vecsh"] li a {font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;font-weight: 300;font-style: normal;}.font_6r6j2859n, [data-font="font_6r6j2859n"], [data-font="font_6r6j2859n"] li a {font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;font-weight: 500;font-style: normal;}.font_xvumvqyag, [data-font="font_xvumvqyag"], [data-font="font_xvumvqyag"] li a {font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;font-weight: 600;font-style: normal;}.font_eulicwzxv, [data-font="font_eulicwzxv"], [data-font="font_eulicwzxv"] li a {font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;font-weight: 700;font-style: normal;}.font_7asaif1bg, [data-font="font_7asaif1bg"], [data-font="font_7asaif1bg"] li a {font-family: "Gotham A", "Gotham B", sans-serif;font-weight: 300;font-style: normal;}.font_i6w8ye4fk, [data-font="font_i6w8ye4fk"], [data-font="font_i6w8ye4fk"] li a {font-family: "Gotham A", "Gotham B", sans-serif;font-weight: 400;font-style: normal;}</style>
+		<style type="text/css" id="semplice-custom-css">
+			
+				@media screen and (min-width: 1170px) {
+					.container-fluid, .container, .admin-container {
+						padding: 0 5.55556rem 0 5.55556rem;
+					}
+				}
+			.container {
+			max-width: 1370px;
+		}@media screen and (max-width: 1169px) { .row {
+			margin-left: -2.5px;
+			margin-right: -2.5px;
+		}.column, .grid-column {
+			padding-left: 2.5px;
+			padding-right: 2.5px;
+		}}@media screen and (min-width: 1170px) { .row {
+			margin-left: -2.5px;
+			margin-right: -2.5px;
+		}.column, .grid-column {
+			padding-left: 2.5px;
+			padding-right: 2.5px;
+		}}
+			#content-holder h1 { font-size: 8.88888888888889rem;line-height: 7.777777777777778rem;letter-spacing: 0.1111111111111111rem;}#content-holder h2 { font-size: 6.111111111111111rem;line-height: 5rem;letter-spacing: 0.08888888888888889rem;}#content-holder h3 { font-size: 6.111111111111111rem;line-height: 4.444444444444445rem;letter-spacing: 0.08888888888888889rem;}#content-holder h5 { font-size: 0.7222222222222222rem;line-height: 1.1111111111111112rem;letter-spacing: 0.16666666666666666rem;}#content-holder p, #content-holder li { font-size: 0.8888888888888888rem;line-height: 1.9444444444444;}#content-holder .is-content p { margin-bottom: 1.9444444444444em; }@media screen and (min-width: 992px) and (max-width: 1169px) { #content-holder h1 { font-size: 8.18rem; line-height: 7.16rem; }#content-holder h2 { font-size: 5.62rem; line-height: 4.6rem; }#content-holder h3 { font-size: 5.87rem; line-height: 4.27rem; }#content-holder h4 { font-size: 0.75rem; line-height: 1.33rem; }#content-holder h5 { font-size: 0.72rem; line-height: 1.11rem; }#content-holder h6 { font-size: 13.89rem; line-height: 15.56rem; }}@media screen and (min-width: 768px) and (max-width: 991px) { #content-holder h1 { font-size: 7.64rem; line-height: 6.69rem; }#content-holder h2 { font-size: 5.38rem; line-height: 4.4rem; }#content-holder h3 { font-size: 5.62rem; line-height: 4.09rem; }#content-holder h4 { font-size: 0.72rem; line-height: 1.28rem; }#content-holder h5 { font-size: 0.72rem; line-height: 1.11rem; }#content-holder h6 { font-size: 13.89rem; line-height: 15.56rem; }}@media screen and (min-width: 544px) and (max-width: 767px) { #content-holder h1 { font-size: 7.29rem; line-height: 6.38rem; }#content-holder h2 { font-size: 5.13rem; line-height: 4.2rem; }#content-holder h3 { font-size: 5.5rem; line-height: 4rem; }#content-holder h4 { font-size: 0.7rem; line-height: 1.25rem; }#content-holder h5 { font-size: 0.72rem; line-height: 1.11rem; }#content-holder h6 { font-size: 13.89rem; line-height: 15.56rem; }}@media screen and (max-width: 543px) { #content-holder h1 { font-size: 6.93rem; line-height: 6.07rem; }#content-holder h2 { font-size: 4.89rem; line-height: 4rem; }#content-holder h3 { font-size: 5.38rem; line-height: 3.91rem; }#content-holder h4 { font-size: 0.68rem; line-height: 1.22rem; }#content-holder h5 { font-size: 0.72rem; line-height: 1.11rem; }#content-holder h6 { font-size: 13.89rem; line-height: 15.56rem; }}
+			
+			
+		.project-panel {
+			background: #000000;
+			padding: 2.0555555555555554rem 0rem;
+		}
+		.pp-thumbs {
+			margin-bottom: -0rem;
+		}
+		#content-holder .panel-label, .projectpanel-preview .panel-label {
+			color: #ffffff;
+			font-size: 1.777777777777778rem;
+			text-transform: uppercase;
+			padding-left: 0rem;
+			padding-bottom: 0rem;
+			text-align: center;
+			line-height: 1;
+		}
+		.project-panel .pp-title {
+			padding: 0.5555555555555556rem 0rem 0rem 0rem;
+		}
+		.project-panel .pp-title a {
+			color: #ffffff; 
+			font-size: 0.7222222222222222rem; 
+			text-transform: none;
+		} 
+		.project-panel .pp-title span {
+			color: #999999;
+			font-size: 0.7222222222222222rem;
+			text-transform: none;
+		}
+	
+			.is-content { color: #292a2c; }a { color: #878787; }a:hover { color: #292a2c; }/* making left right padding of container consistent across tablet and desktop */
+@media screen and (min-width: 544px) and (max-width: 1169.9px){.container, .container-fluid {
+ 	padding:0 1.66667rem;
+}}
+
+/* padding of project cover */
+@media screen and (min-width: 544px) and (max-width: 1169.9px){.project-cover {
+ 	padding-top:5rem !important;
+  	padding-bottom:5rem !important;
+}}
+@media screen and (max-width: 543.9px){.project-cover {
+ 	padding-top:4rem !important;
+  	padding-bottom:4rem !important;
+}}
+
+/* padding of sections */
+@media screen and (min-width: 544px) and (max-width: 1169.9px){.project-section {
+ 	padding-top:5rem !important;
+  	padding-bottom:5rem !important;
+}}
+@media screen and (max-width: 543.9px){.project-section {
+ 	padding-top:4rem !important;
+  	padding-bottom:4rem !important;
+}}
+@media screen and (min-width: 544px) and (max-width: 1169.9px){.project-section-withcontent {
+ 	padding-top:5rem !important;
+  	padding-bottom:5rem !important;
+}}
+@media screen and (max-width: 543.9px){.project-section-withcontent {
+ 	padding-top:4rem !important;
+  	padding-bottom:2rem !important;
+}}
+
+/* flipping order of stacked content */
+@media screen and (max-width: 767.9px){.mobile-order1 {
+ 	order: 1;
+}}
+@media screen and (max-width: 767.9px){.mobile-order2 {
+ 	order: 2;
+}}
+
+/* adding padding to stacked content */
+@media screen and (max-width: 767.9px){.stacked-padding-top-4 {
+ 	padding-top:4rem !important;
+}}
+@media screen and (max-width: 767.9px){.stacked-padding-bottom-4 {
+ 	padding-bottom:4rem !important;
+}}
+@media screen and (max-width: 767.9px){.stacked-padding-top-2 {
+ 	padding-top:2rem !important;
+}}
+@media screen and (max-width: 767.9px){.stacked-padding-bottom-2 {
+ 	padding-bottom:2rem !important;
+}}
+@media screen and (max-width: 767.9px){.stacked-padding-top-1 {
+ 	padding-top:1rem !important;
+}}
+@media screen and (max-width: 767.9px){.stacked-margin-bottom-4 {
+ 	margin-bottom:4rem !important;
+}}
+@media screen and (max-width: 767.9px){.stacked-padding-top-micro {
+ 	padding-top:5px !important;
+}}
+
+/* reduce tablet image width by adding padding */
+@media screen and (max-width: 767.9px){.image-reducer {
+ 	padding-left:3rem;
+  	padding-right:3rem;
+}}
+
+/* spacing between project intro description and project intro title */
+@media screen and (min-width: 544px) and (max-width: 1169.9px){.project-title {
+ 	margin-top:4.16667rem !important;
+}}
+@media screen and (max-width: 543.9px){.project-title {
+ 	margin-top:1.66667rem !important;
+  	margin-bottom:0.83334rem !important;
+}}
+
+/* subsection project description spacing */
+@media screen and (max-width: 767.9px){.project-description-padding {
+ 	padding-bottom:2rem !important;
+}}
+
+/* two column layout */
+@media screen and (max-width: 767.9px){.two-column-collapse {
+ 	width: 50% !important;
+  	max-width:50% !important;
+}}
+
+/* footer text alignment */
+@media screen and (max-width: 767.9px){.mobile-text-center, .mobile-text-center .ce-button {
+  	text-align:center !important;
+}}
+
+/* about background */
+@media screen and (max-width: 767.9px){#section_bd16ae458 .container{
+	min-height:100vh !important;
+}}
+@media screen and (max-width: 767.9px){#column_bso2akul8, .removetitle h5 {
+	display: none !important;
+}}
+
+/* home */
+@media screen and (max-width: 767.9px){.removemargin .column-content {
+	margin:0 !important;
+}}
+.home .background-video {
+	position: fixed !important;
+}
+
+/* responsive type */
+@media screen and (max-width: 543.9px){h1 {
+ 	font-size:4rem !important;
+  	line-height:3.5rem !important;
+}}
+@media screen and (max-width: 543.9px){h2 {
+ 	font-size:3rem !important;
+    line-height:1.5rem !important;
+}}
+@media screen and (max-width: 543.9px){h5 {
+ 	font-size:0.6rem !important;
+    line-height:1.1rem !important;
+}}
+@media screen and (max-width: 543.9px){p {
+ 	font-size:0.7rem !important;
+    line-height:1.8 !important;
+}}
+@media screen and (max-width: 767.9px){.mobile-text-left p {
+  	text-align:left !important;
+}}
+@media screen and (max-width: 543.9px){#column_4or1qa11w .font_7asaif1bg {
+ 	font-size:0.75rem !important;
+  	line-height:0.75rem !important;
+}}
+/* home cover text */
+@media screen and (max-width: 543.9px){.hometitle h1 {
+ 	font-size:4rem !important;
+  	line-height:4rem !important;
+  	margin-bottom: 1rem !important;
+}}
+@media screen and (max-width: 543.9px){.hometitle h3 {
+ 	font-size:3.5rem !important;
+  	line-height:3.5rem !important;
+  	margin-bottom: 0.5rem !important;
+}}
+/* about header */
+@media screen and (max-width: 543.9px){#content_1m2trx65t h1 {
+ 	font-size:3.75rem !important;
+  	line-height:3.5rem !important;
+}}
+/* footer get in touch button */
+@media screen and (max-width: 543.9px){#content_5b2b5fa6d a, #content_9be6a18eb a, #content_65de5d4a5 a, #content_65f7339bd a, #content_feaa0bebb a, #content_9220c99f9 a, #content_7f727456f a, #content_df94a7e40 a {
+ 	font-size:0.6rem !important;
+    line-height:1.1rem !important;
+}}#nprogress .bar { background: transparent; }
+		</style>
+	
+		<style type="text/css" id="2207-post-css">
+			.cover-transparent { background: rgba(0,0,0,0) !important; }#content-2207 .sections { margin-top: 0px !important; }#content-2207 .semplice-cover .show-more svg { fill: #ffffff; }#content-2207 #cover-2207 > .background-video {background-color: #000000;}#content-2207 #content_h4njjiwu1 {padding-top: 0rem;padding-bottom: 0rem;padding-left: 0rem;z-index: 1;}#content-2207 #content_h4njjiwu1 .is-content {}#content-2207 #section_67782ae22 > .background-video {background-color: transparent;}#content-2207 #section_67782ae22 {padding-top: 0rem;padding-bottom: 0rem;margin-bottom: 0rem;margin-left: 0rem;background-color: transparent;}#content-2207 #content_47ccf2a5d {}#content-2207 #content_47ccf2a5d .is-content {box-shadow: 0rem 0rem 0rem 0rem rgba(0,0,0,0);}#content-2207 #column_29f1b140d {padding-bottom: 0rem;}#content-2207 #content_d6bd4f917 {padding-top: 0rem;margin-top: 0rem;padding-right: 0rem;margin-right: 0rem;padding-bottom: 0rem;margin-bottom: 0rem;padding-left: 0rem;margin-left: -2.7777777777777777rem;background-color: transparent;z-index: 2;}#content-2207 #content_d6bd4f917 .is-content {}#content-2207 #section_f6nwpzhoo > .background-video {}#content-2207 #section_f6nwpzhoo {}#content-2207 #content_8d11083eb {padding-top: 0rem;margin-top: 0rem;margin-right: 0rem;margin-bottom: 0rem;margin-left: 5.555555555555555rem;z-index: 2;}#content-2207 #content_8d11083eb .is-content {}#content-2207 #content_f17c24aa0 {}#content-2207 #content_f17c24aa0 .is-content {box-shadow: 0rem 0rem 0rem 0rem rgba(0,0,0,1);}#content-2207 #section_73b312571 {padding-bottom: 0rem;margin-bottom: 0rem;margin-left: 0rem;background-color: transparent;}#content-2207 #content_d279aa45c {}#content-2207 #content_d279aa45c .is-content {box-shadow: 0rem 0rem 0rem 0rem rgba(0,0,0,0);}#content-2207 #column_5a124a786 {padding-bottom: 0rem;}#content-2207 #content_fa33c3a02 {padding-top: 0rem;margin-top: 0rem;margin-right: 0rem;margin-bottom: 0rem;margin-left: -2.7777777777777777rem;z-index: 2;}#content-2207 #content_fa33c3a02 .is-content {}#content-2207 #section_f9e985ff7 {padding-top: 11.11111111111111rem;padding-bottom: 11.11111111111111rem;margin-bottom: 0rem;background-color: transparent;}#content-2207 #content_cade9ca0b {padding-top: 0rem;margin-top: 0rem;margin-right: 0rem;margin-bottom: 0rem;margin-left: 5.555555555555555rem;z-index: 2;}#content-2207 #content_cade9ca0b .is-content {text-shadow: 0rem 0rem 0.5555555555555556rem rgba(0,0,0,1);}#content-2207 #column_a1b832f2f {padding-bottom: 0rem;}#content-2207 #content_99e1e25d8 {}#content-2207 #content_99e1e25d8 .is-content {box-shadow: 0rem 0rem 0rem 0rem rgba(0,0,0,0);}#content-2207 #section_863f0fdf9 {padding-bottom: 0rem;margin-bottom: 0rem;margin-left: 0rem;background-color: transparent;}#content-2207 #content_52245791b {}#content-2207 #content_52245791b .is-content {box-shadow: 0rem 0rem 0rem 0rem rgba(0,0,0,0);}#content-2207 #column_06b237ca0 {padding-bottom: 0rem;}#content-2207 #content_0c1d97270 {padding-top: 0rem;margin-top: 0rem;margin-right: 0rem;margin-bottom: 0rem;margin-left: -2.7777777777777777rem;z-index: 2;}#content-2207 #content_0c1d97270 .is-content {}#content-2207 #section_006f4281a {padding-bottom: 0rem;margin-bottom: 0rem;background-color: transparent;}#content-2207 #content_ef8949e39 {padding-top: 0rem;margin-top: 0rem;margin-right: 0rem;margin-bottom: 0rem;margin-left: 5.555555555555555rem;z-index: 2;}#content-2207 #content_ef8949e39 .is-content {}#content-2207 #content_939cd61f4 {}#content-2207 #content_939cd61f4 .is-content {box-shadow: 0rem 0rem 0rem 0rem rgba(0,0,0,0);}#content-2207 #section_7aa200664 {padding-bottom: 16.666666666666668rem;margin-bottom: 0rem;margin-left: 0rem;background-color: transparent;}#content-2207 #content_aaf64eb48 {}#content-2207 #content_aaf64eb48 .is-content {box-shadow: 0rem 0rem 0rem 0rem rgba(0,0,0,0);}#content-2207 #column_k0yxskpec {}#content-2207 #content_5e5b90f96 {padding-top: 0rem;margin-top: 0rem;margin-right: 0rem;margin-bottom: 0rem;margin-left: -2.7777777777777777rem;z-index: 2;}#content-2207 #content_5e5b90f96 .is-content {}#content-2207 #content_ogzklj6eu .spacer { background-color: #3d3d3d; }#content-2207 #content_ogzklj6eu .spacer { height: 0.05555555555555555rem; }#content-2207 #section_bcb30936d {padding-top: 11.11111111111111rem;padding-bottom: 5.555555555555555rem;background-color: #000000;}#content-2207 #content_b8385ad7b {margin-bottom: -0.5555555555555556rem;}#content-2207 #content_b8385ad7b .is-content {}
+				#content-2207 #content_6b60d222f .is-content {background-color: transparent;}
+				#content-2207 #content_6b60d222f .is-content:hover {color: #ffffff !important;background-color: transparent !important;}
+				#content-2207 #content_6b60d222f .is-content a{padding-top: 0rem;padding-right: 0rem;padding-bottom: 0rem;padding-left: 0rem;font-size: 3.888888888888889rem;letter-spacing: 0rem;margin-right: -0rem;color: #ffffff;}
+				#content-2207 #content_6b60d222f .is-content:hover a {color: #878787 !important;letter-spacing: 0rem !important;margin-right: -0rem;}
+			#content-2207 #content_6b60d222f {padding-top: 0rem;padding-bottom: 0rem;margin-bottom: 5.555555555555555rem;}#content-2207 #content_6b60d222f .is-content {}#content-2207 #content_74d9e2155 {padding-top: 0.3333333333333333rem;margin-top: 0rem;padding-bottom: 0.16666666666666666rem;}#content-2207 #content_74d9e2155 .is-content {}
+				#content-2207 #content_5b2b5fa6d .is-content {background-color: transparent;}
+				#content-2207 #content_5b2b5fa6d .is-content:hover {background-color: transparent !important;color: #ffffff !important;}
+				#content-2207 #content_5b2b5fa6d .is-content a{padding-top: 0rem;padding-right: 0rem;padding-bottom: 0rem;padding-left: 0rem;color: #ffffff;font-size: 0.7222222222222222rem;letter-spacing: 0.16666666666666666rem;margin-right: -0.16666666666666666rem;}
+				#content-2207 #content_5b2b5fa6d .is-content:hover a {color: #878787 !important;}
+			#content-2207 .transition-wrap {background-color: #000000;}.back-to-top a svg { fill: #ffffff; }#content-2207 #column_4or1qa11w {opacity: 1;transform:;}#content-2207 #column_c25271924 {opacity: 0;transform: scale(0.8);}#content-2207 #content_47ccf2a5d {transform: scale(1);}#content-2207 #content_d6bd4f917 {opacity: 0;transform: translateX(-8.333333333333334rem) translateY(0rem);}#content-2207 #content_8d11083eb {opacity: 0;transform: translateX(8.333333333333334rem) translateY(0rem);}#content-2207 #column_i2uky5928 {opacity: 0.5;transform: scale(0.7);}#content-2207 #content_f17c24aa0 {transform: scale(0.9);}#content-2207 #column_5a18ee92c {opacity: 0;transform: scale(0.8);}#content-2207 #content_d279aa45c {transform: scale(1);}#content-2207 #content_fa33c3a02 {opacity: 0;transform: translateX(-8.333333333333334rem) translateY(0rem);}#content-2207 #content_cade9ca0b {opacity: 0;transform: translateX(8.333333333333334rem) translateY(0rem);}#content-2207 #column_a1b832f2f {opacity: 0;transform: scale(0.7);}#content-2207 #content_99e1e25d8 {transform: scale(0.9);}#content-2207 #column_b31f67a2c {opacity: 0;transform: scale(0.8);}#content-2207 #content_52245791b {transform: scale(1);}#content-2207 #content_0c1d97270 {opacity: 0;transform: translateX(-8.333333333333334rem) translateY(0rem);}#content-2207 #content_ef8949e39 {opacity: 0;transform: translateX(8.333333333333334rem) translateY(0rem);}#content-2207 #column_ff37c5f09 {opacity: 0;transform: scale(0.6);}#content-2207 #content_939cd61f4 {transform: scale(1);}#content-2207 #column_e5dddfdc9 {opacity: 0;transform: scale(0.8);}#content-2207 #content_aaf64eb48 {transform: scale(1);}#content-2207 #content_5e5b90f96 {opacity: 0;transform: translateX(-8.333333333333334rem) translateY(0rem);}
+			.nav_2tcn20pyx { background-color: transparent;; }.nav_2tcn20pyx { padding-top: 2.7777777777777777rem; }.nav_2tcn20pyx { padding-bottom: 2.7777777777777777rem; }.nav_2tcn20pyx .navbar-inner .navbar-left, .nav_2tcn20pyx .navbar-inner .navbar-center { left: 2.7777777777777777rem; }.nav_2tcn20pyx .container-fluid .navbar-inner .navbar-right { right: 2.7777777777777777rem; }.nav_2tcn20pyx .container-fluid .hamburger a:after { padding-right: 1.1111111111111rem; }.nav_2tcn20pyx .logo img, .nav_2tcn20pyx .logo svg { width: 2.7777777777777777rem; }.nav_2tcn20pyx .navbar-inner .hamburger { align-items: center; }.nav_2tcn20pyx .navbar-inner .hamburger a.menu-icon span { background-color: #ffffff; }.nav_2tcn20pyx .navbar-inner .hamburger a.menu-icon { width: 1.1111111111111112rem; }.nav_2tcn20pyx .navbar-inner .hamburger a.menu-icon span { height: 1px; }.nav_2tcn20pyx .navbar-inner .hamburger a.open-menu span::before { transform: translateY(-6px); }.nav_2tcn20pyx .navbar-inner .hamburger a.open-menu span::after { transform: translateY(6px); }.nav_2tcn20pyx .navbar-inner .hamburger a.open-menu:hover span::before { transform: translateY(-8px); }.nav_2tcn20pyx .navbar-inner .hamburger a.open-menu:hover span::after { transform: translateY(8px); }.nav_2tcn20pyx .navbar-inner .hamburger a.menu-icon { height: 13px; }.nav_2tcn20pyx .navbar-inner .hamburger a.menu-icon span { margin-top: 6.5px; }.nav_2tcn20pyx .navbar-inner .hamburger { display: flex; }#overlay-menu { background-color: rgba(0, 0, 0, 1); }#overlay-menu .overlay-menu-inner nav { text-align: right; }#overlay-menu .overlay-menu-inner nav ul li a span { font-size: 2.2222222222222223rem; }#overlay-menu .overlay-menu-inner nav ul li a span { color: #ffffff; }#overlay-menu .overlay-menu-inner nav ul li a { padding-top: 0.55555555555556rem; }#overlay-menu .overlay-menu-inner nav ul li a { padding-bottom: 0.55555555555556rem; }#overlay-menu .overlay-menu-inner nav ul li a span { text-transform: uppercase; }#overlay-menu .overlay-menu-inner nav ul li a span { letter-spacing: 0.08333333333333333rem; }#overlay-menu .overlay-menu-inner nav ul li a:hover span { color: #777777; }#overlay-menu .overlay-menu-inner nav ul li.current-menu-item a span { color: #777777; }#overlay-menu .overlay-menu-inner nav ul li.current_page_item a span { color: #777777; }[data-post-type="project"] #overlay-menu .overlay-menu-inner nav ul li.portfolio-grid a span, [data-post-type="post"] #overlay-menu .overlay-menu-inner nav ul li.blog-overview a span { color: #777777; }@media screen and (min-width: 992px) and (max-width: 1169.9px) { .nav_2tcn20pyx .navbar-inner .navbar-left, .nav_2tcn20pyx .navbar-inner .navbar-center { left: 1.6666666666666667rem; }.nav_2tcn20pyx .container-fluid .navbar-inner .navbar-right { right: 1.6666666666666667rem; }.nav_2tcn20pyx .container-fluid .hamburger a:after { padding-right: 1.1111111111111rem; }.nav_2tcn20pyx .navbar-inner .hamburger a.menu-icon { height: 13px; }.nav_2tcn20pyx .navbar-inner .hamburger a.menu-icon span { margin-top: 6.5px; }}@media screen and (min-width: 768px) and (max-width: 991.9px) { .nav_2tcn20pyx .navbar-inner .navbar-left, .nav_2tcn20pyx .navbar-inner .navbar-center { left: 1.1111111111111112rem; }.nav_2tcn20pyx .container-fluid .navbar-inner .navbar-right { right: 1.1111111111111112rem; }.nav_2tcn20pyx .container-fluid .hamburger a:after { padding-right: 1.1111111111111rem; }.nav_2tcn20pyx .navbar-inner .hamburger a.menu-icon { height: 13px; }.nav_2tcn20pyx .navbar-inner .hamburger a.menu-icon span { margin-top: 6.5px; }}@media screen and (min-width: 544px) and (max-width: 767.9px) { .nav_2tcn20pyx .navbar-inner .navbar-left, .nav_2tcn20pyx .navbar-inner .navbar-center { left: 1.6666666666666667rem; }.nav_2tcn20pyx .container-fluid .navbar-inner .navbar-right { right: 1.6666666666666667rem; }.nav_2tcn20pyx .container-fluid .hamburger a:after { padding-right: 1.1111111111111rem; }.nav_2tcn20pyx .navbar-inner .hamburger a.menu-icon { height: 13px; }.nav_2tcn20pyx .navbar-inner .hamburger a.menu-icon span { margin-top: 6.5px; }}@media screen and (max-width: 543.9px) { .nav_2tcn20pyx .navbar-inner .navbar-left, .nav_2tcn20pyx .navbar-inner .navbar-center { left: 1.1111111111111112rem; }.nav_2tcn20pyx .container-fluid .navbar-inner .navbar-right { right: 1.1111111111111112rem; }.nav_2tcn20pyx .container-fluid .hamburger a:after { padding-right: 1.1111111111111rem; }.nav_2tcn20pyx .navbar-inner .hamburger a.menu-icon { height: 13px; }.nav_2tcn20pyx .navbar-inner .hamburger a.menu-icon span { margin-top: 6.5px; }#overlay-menu .overlay-menu-inner nav ul li a span { font-size: 1.6666666666666667rem; }#overlay-menu .overlay-menu-inner nav ul li a { padding-top: 0.41666666666667rem; }#overlay-menu .overlay-menu-inner nav ul li a { padding-bottom: 0.41666666666667rem; }}
+		</style>
+			<style>html{margin-top:0px!important;}#wpadminbar{top:auto!important;bottom:0;}</style>
+		<script async="" src="./Eunice Joung_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121821810-1');
+</script>
+<link rel="shortcut icon" type="image/png" href="http://eunicejoung.com/wp-content/uploads/2018/07/Favicon.png" sizes="32x32">	</head>
+	<body class="home page-template-default page page-id-2207 is-frontend static-mode static-transitions mejs-semplice-ui" bgcolor="#ffffff" data-post-type="page" data-post-id="2207" data-breakpoint-js="xl">
+		<div id="content-holder" data-active-post="2207" style="width: 100%;">
+			
+						
+						
+				<header class="nav_2tcn20pyx semplice-navbar active-navbar sticky-nav cover-transparent" data-cover-transparent="enabled" data-bg-overlay-visibility="hidden" style="transform: none; background-color: rgba(0, 0, 0, 0); position: fixed;">
+							<div class="container-fluid" data-nav="logo-left-menu-right">
+								<div class="navbar-inner menu-type-hamburger" data-xl-width="12" data-navbar-type="container-fluid">
+									<div class="logo navbar-left"><a href="http://eunicejoung.com/" title="Eunice Joung"><img src="./Eunice Joung_files/SignatureCropped_W.png" alt="logo"></a></div>
+									
+									<div class="hamburger navbar-right semplice-menu" data-status="closed"><a class="menu-icon open-menu"><span></span></a></div>
+								</div>
+							</div>
+						</header><div id="overlay-menu" style="display: none; z-index: -1; opacity: 0;">
+					<div class="overlay-menu-inner" data-xl-width="12">
+						<nav class="overlay-nav" data-justify="right" data-align="align-middle" data-font="font_9egbh93i6">
+							<ul class="container"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2388"><a href="http://eunicejoung.com/about"><span>About</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-2326"><a href="http://eunicejoung.com/project/jacquard"><span>Jacquard</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-2327"><a href="http://eunicejoung.com/project/pryme-vessyl"><span>Pryme Vessyl</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-2329"><a href="http://eunicejoung.com/project/mark-one"><span>Mark One</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-2328"><a href="http://eunicejoung.com/project/cinemagram"><span>Cinemagram</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-2325"><a href="http://eunicejoung.com/project/metrocard"><span>MetroCard</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-2323"><a href="http://eunicejoung.com/project/mmonster"><span>Mmonster</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-project menu-item-2324"><a href="http://eunicejoung.com/project/heliocentric"><span>Heliocentric</span></a></li>
+</ul>
+						</nav>
+					</div>
+				</div>
+			
+					
+			<div id="content-2207" class="content-container active-content  hide-on-init" style="opacity: 1;">
+				<div class="transition-wrap">
+					<div class="sections">
+						
+					<section id="cover-2207" class="semplice-cover" data-height="fullscreen" data-column-mode-sm="single" data-column-mode-xs="single" data-valign="center" data-layout="grid" data-cover="visible" data-parallax="parallax" style="height: 659px;">
+						<a class="show-more show-more-hidden semplice-event" data-event-type="helper" data-event="scrollToContent"><svg version="1.1" id="Ebene_2_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="53px" height="20px" viewBox="0 0 53 20" enable-background="new 0 0 53 20" xml:space="preserve">
+<g>
+	<polygon points="26.5,17.688 9.114,3.779 10.303,2.312 26.5,15.269 42.697,2.313 43.886,3.779 	"></polygon>
+</g>
+</svg>
+</a>
+				<div class="background-video">
+					<video data-autoplay="" autoplay="" webkit-playsinline="" playsinline="" loop="" muted="" data-object-fit="cover">
+						<source src="http://eunicejoung.com/wp-content/uploads/2018/07/splash-lines-final-20sec.mp4" type="video/mp4">
+					</video>
+				</div>
+			
+						<div class="container">
+						<div id="row_cover" class="row"><div id="column_4or1qa11w" class="column" data-xl-width="12" style="opacity: 0.64316;">
+					<div class="content-wrapper">
+						
+				<div id="content_q4png9t1n" class="column-content" data-module="paragraph">
+					<div class="is-content"><div data-content-for="xl"><h5 style="text-align: center; font-size: 1.33333rem; line-height: 2.66667rem;" data-mce-style="text-align: center; font-size: 1.33333rem; line-height: 2.66667rem;"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;" class="font_7asaif1bg">SELECT WORKS BY</span></h5></div></div>
+				</div>
+			
+				<div id="content_h4njjiwu1" class="column-content hometitle" data-module="paragraph">
+					<div class="is-content"><div data-content-for="xl"><h1 style="text-align: center; line-height: 8.88889rem;" data-mce-style="text-align: center; line-height: 8.88889rem;"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">EUNICE JOUNG</span></h1></div></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section>				
+				
+					<section id="section_67782ae22" class="content-block stacked-padding-bottom-4" data-column-mode-sm="single" data-column-mode-xs="single" data-valign="center" data-height="dynamic">
+						<div class="background-video"></div>
+						<div class="container">
+						<div id="row_21d657d3c" class="row"><div id="column_c25271924" class="column" data-xl-width="6" style="opacity: 0; transform: matrix(0.8, 0, 0, 0.8, 0, 0);">
+					<div class="content-wrapper">
+						
+				<div id="content_47ccf2a5d" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><a href="http://eunicejoung.com/project/jacquard" target="_self"><img class="is-content" src="./Eunice Joung_files/project-thumb-jacquard-jacket-02.png" width="900" height="1200" alt="project-thumb-jacquard-jacket-02" caption="" data-width="grid-width" data-scaling="no"></a></div>
+				</div>
+			
+					</div>
+				</div><div id="column_29f1b140d" class="column removemargin hometitle" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_d6bd4f917" class="column-content mobile-text-center removetitle" data-module="paragraph" style="opacity: 0; transform: matrix(1, 0, 0, 1, -150, 0);">
+					<div class="is-content"><div data-content-for="xl"><h5 data-mce-style="line-height: 0.333333rem;" style="line-height: 0.333333rem;"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">INTERACTIVE GARMENT</span></h5><h3><a data-mce-href="../project/jacquard" href="http://eunicejoung.com/project/jacquard" data-mce-selected="1"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">JACQUARD</span></a></h3><p><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">A Google ATAP project,&nbsp;Jacquard weaves conductive threads into everyday clothes, augmenting them to be touch-interactive. The first Jacquard enabled garment is a jacket created in partnership with Levi's.</span></p></div></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section>				
+				
+					<section id="section_f6nwpzhoo" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single" data-valign="center">
+						<div class="background-video"></div>
+						<div class="container">
+						<div id="row_xrf6rz7fu" class="row"><div id="column_kpobsman5" class="column mobile-order2 removemargin hometitle" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_8d11083eb" class="column-content mobile-text-center removetitle" data-module="paragraph" style="opacity: 0; transform: matrix(1, 0, 0, 1, 150, 0);">
+					<div class="is-content"><div data-content-for="xl"><h5 data-mce-style="line-height: 0.333333rem;" style="line-height: 0.333333rem;"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">SMART CUP</span></h5><h3><a data-mce-href="../project/pryme-vessyl" href="http://eunicejoung.com/project/pryme-vessyl" data-mce-selected="1"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">PRYME VESSYL</span></a></h3><p><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">Pryme Vessyl is an intelligent cup that automatically tracks water consumption and hydration levels to help you stay hydrated throughout the day.&nbsp;The cup syncs with an app to provide insights and allow users to learn about their behavior.</span></p></div></div>
+				</div>
+			
+					</div>
+				</div><div id="column_i2uky5928" class="column mobile-order1" data-xl-width="6" style="opacity: 0.5; transform: matrix(0.7, 0, 0, 0.7, 0, 0);">
+					<div class="content-wrapper">
+						
+				<div id="content_f17c24aa0" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><a href="http://eunicejoung.com/project/pryme-vessyl" target="_self"><img class="is-content" src="./Eunice Joung_files/project-thumb-pryme-03.png" width="900" height="1200" alt="project-thumb-pryme-03" caption="" data-width="grid-width" data-scaling="no"></a></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section>				
+				
+					<section id="section_73b312571" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single" data-valign="center" data-height="dynamic">
+						
+						<div class="container">
+						<div id="row_81ae1e024" class="row"><div id="column_5a18ee92c" class="column" data-xl-width="6" style="opacity: 0; transform: matrix(0.8, 0, 0, 0.8, 0, 0);">
+					<div class="content-wrapper">
+						
+				<div id="content_d279aa45c" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><a href="http://eunicejoung.com/project/mark-one" target="_self"><img class="is-content" src="./Eunice Joung_files/project-thumb-markone-11.png" width="1500" height="1796" alt="project-thumb-markone-11" caption="" data-width="grid-width" data-scaling="no"></a></div>
+				</div>
+			
+					</div>
+				</div><div id="column_5a124a786" class="column removemargin hometitle stacked-padding-top-2" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_fa33c3a02" class="column-content mobile-text-center removetitle" data-module="paragraph" style="opacity: 0; transform: matrix(1, 0, 0, 1, -150, 0);">
+					<div class="is-content"><div data-content-for="xl"><h5 data-mce-style="line-height: 0.333333rem;" style="line-height: 0.333333rem;"><span data-mce-style="color: #ffffff;" style="color: rgb(255, 255, 255);">HEALTH &amp; TECH BRAND</span></h5><h3><a data-mce-href="../project/mark-one" href="http://eunicejoung.com/project/mark-one" data-mce-selected="1"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">MARK ONE</span></a></h3><p><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">Mark One is a consumer brand aiming to build desirable products that inform and inspire people to make healthier choices.&nbsp;The first product, Vessyl, is a cup that identifies, tracks, and aggregates the nutritional value of all beverages.</span><br></p></div></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section>				
+				
+					<section id="section_f9e985ff7" class="content-block stacked-padding-bottom-4 stacked-padding-top-4" data-column-mode-sm="single" data-column-mode-xs="single" data-valign="center" data-height="dynamic">
+						
+						<div class="container">
+						<div id="row_d7440745e" class="row"><div id="column_agixvj4zn" class="column mobile-order2 removemargin hometitle stacked-padding-top-2" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_cade9ca0b" class="column-content mobile-text-center removetitle" data-module="paragraph" style="opacity: 0; transform: matrix(1, 0, 0, 1, 150, 0);">
+					<div class="is-content"><div data-content-for="xl"><h5 data-mce-style="line-height: 0.333333rem;" style="line-height: 0.333333rem;"><span data-mce-style="color: #ffffff;" style="color: rgb(255, 255, 255);">SOCIAL CONTENT CREATION APP</span></h5><h3><a data-mce-href="../project/cinemagram" href="http://eunicejoung.com/project/cinemagram"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">CINEMAGRAM</span></a></h3><p><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">Cinemagram is a social app that lets you create and share cinemagraphs from your mobile phone. After filming a short video, painting over parts of the video lets you choose what moves.</span></p></div></div>
+				</div>
+			
+					</div>
+				</div><div id="column_a1b832f2f" class="column mobile-order1" data-xl-width="6" style="opacity: 0; transform: matrix(0.7, 0, 0, 0.7, 0, 0);">
+					<div class="content-wrapper">
+						
+				<div id="content_99e1e25d8" class="column-content" data-module="image" style="transform: matrix(0.9, 0, 0, 0.9, 0, 0); background-color: rgba(255, 255, 255, 0);">
+					<div class="ce-image" data-align="left"><a href="http://eunicejoung.com/project/cinemagram" target="_self"><img class="is-content" src="./Eunice Joung_files/tumblr_p3hhj1ToK41u9ooogo1_540-1.gif" width="540" height="675" alt="tumblr_p3hhj1ToK41u9ooogo1_540" caption="" data-width="grid-width" data-scaling="no"></a></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section>				
+				
+					<section id="section_863f0fdf9" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single" data-valign="center" data-height="dynamic">
+						
+						<div class="container">
+						<div id="row_98f189034" class="row"><div id="column_b31f67a2c" class="column" data-xl-width="6" style="opacity: 0; transform: matrix(0.8, 0, 0, 0.8, 0, 0);">
+					<div class="content-wrapper">
+						
+				<div id="content_52245791b" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><a href="http://eunicejoung.com/project/metrocard" target="_self"><img class="is-content" src="./Eunice Joung_files/project-thumb-metrocard.png" width="1500" height="1500" alt="project-thumb-metrocard" caption="" data-width="grid-width" data-scaling="no"></a></div>
+				</div>
+			
+					</div>
+				</div><div id="column_06b237ca0" class="column removemargin hometitle stacked-padding-top-2" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_0c1d97270" class="column-content mobile-text-center removetitle" data-module="paragraph" style="opacity: 0; transform: matrix(1, 0, 0, 1, -150, 0);">
+					<div class="is-content"><div data-content-for="xl"><h5 data-mce-style="line-height: 0.333333rem;" style="line-height: 0.333333rem;"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">NYC SUBWAY CARD REDESIGN</span></h5><h3><a data-mce-href="../project/metrocard" href="http://eunicejoung.com/project/metrocard" data-mce-selected="1"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">METROCARD</span></a></h3><p><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">Out of the&nbsp;numerous&nbsp;swiping problems that exist at turnstiles, this conceptual redesign of New York City's iconic MetroCard tackles the specific issue of people swiping their cards in the wrong direction.</span></p></div></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section>				
+				
+					<section id="section_006f4281a" class="content-block stacked-padding-bottom-4" data-column-mode-sm="single" data-column-mode-xs="single" data-valign="center" data-height="dynamic">
+						
+						<div class="container">
+						<div id="row_7fa432d80" class="row"><div id="column_c8rs6ro35" class="column mobile-order2 removemargin hometitle" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_ef8949e39" class="column-content mobile-text-center removetitle" data-module="paragraph" style="opacity: 0; transform: matrix(1, 0, 0, 1, 150, 0);">
+					<div class="is-content"><div data-content-for="xl"><h5 data-mce-style="line-height: 0.333333rem;" style="line-height: 0.333333rem;"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">CANDY PACKAGING</span></h5><h3><a data-mce-href="../project/mmonster" href="http://eunicejoung.com/project/mmonster" data-mce-selected="1"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">MMONSTER</span></a></h3><p><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">Mmonster is a concept candy brand that comes in four colorful flavors: creamy, minty, sour, fruity. These prototypes are printed and constructed individually by hand.</span></p></div></div>
+				</div>
+			
+					</div>
+				</div><div id="column_ff37c5f09" class="column mobile-order1" data-xl-width="6" style="opacity: 0; transform: matrix(0.6, 0, 0, 0.6, 0, 0);">
+					<div class="content-wrapper">
+						
+				<div id="content_939cd61f4" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><a href="http://eunicejoung.com/project/mmonster" target="_self"><img class="is-content" src="./Eunice Joung_files/project-thumbnails-mmonster-05.png" width="900" height="1200" alt="project-thumbnails-mmonster-05" caption="" data-width="grid-width" data-scaling="no"></a></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section>				
+				
+					<section id="section_7aa200664" class="content-block stacked-padding-bottom-4" data-column-mode-sm="single" data-column-mode-xs="single" data-valign="center" data-height="dynamic">
+						
+						<div class="container">
+						<div id="row_751e85e3d" class="row"><div id="column_e5dddfdc9" class="column" data-xl-width="6" style="opacity: 0; transform: matrix(0.8, 0, 0, 0.8, 0, 0);">
+					<div class="content-wrapper">
+						
+				<div id="content_aaf64eb48" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><a href="http://eunicejoung.com/project/heliocentric" target="_self"><img class="is-content" src="./Eunice Joung_files/heliocentric-circle-3.png" width="621" height="621" alt="heliocentric-circle-3" caption="" data-width="grid-width" data-scaling="no"></a></div>
+				</div>
+			
+					</div>
+				</div><div id="column_k0yxskpec" class="column removemargin hometitle stacked-padding-top-2" data-xl-width="5">
+					<div class="content-wrapper">
+						
+				<div id="content_5e5b90f96" class="column-content mobile-text-center removetitle" data-module="paragraph" style="opacity: 0; transform: matrix(1, 0, 0, 1, -150, 0);">
+					<div class="is-content"><div data-content-for="xl"><h5 data-mce-style="line-height: 0.333333rem;" style="line-height: 0.333333rem;"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">INFOGRAPHIC CALENDAR</span></h5><h3><a data-mce-href="../project/heliocentric" href="http://eunicejoung.com/project/heliocentric" data-mce-selected="1"><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">HELIOCENTRIC</span></a></h3><p><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">This graphic calendar depicts a single earth rotation around the sun – one year. It provides dates for solar, planetary, lunar, and meteoric events and depicts accurate scales of the earth, moon, and sun relative to one another.</span></p></div></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section>				
+				
+					<section id="section_1a2p4xrsb" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single">
+						
+						<div class="container">
+						<div id="row_xlwaugawg" class="row"><div id="column_9oad6d96o" class="column" data-xl-width="12">
+					<div class="content-wrapper">
+						
+				<div id="content_ogzklj6eu" class="column-content" data-module="spacer">
+					
+				<div class="spacer-container">
+					<div class="is-content">
+						<div class="spacer"><!-- horizontal spacer --></div>
+					</div>
+				</div>
+			
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section>				
+				
+					<section id="section_bcb30936d" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single">
+						
+						<div class="container">
+						<div id="row_2ae2658e9" class="row"><div id="column_78e277d08" class="column" data-xl-width="12">
+					<div class="content-wrapper">
+						
+				<div id="content_b8385ad7b" class="column-content" data-module="paragraph">
+					<div class="is-content"><div data-content-for="xl"><h5 data-mce-style="text-align: center;" style="text-align: center;"><span style="color: rgb(135, 135, 135);" data-mce-style="color: #878787;">LEARN MORE</span></h5></div></div>
+				</div>
+			
+				<div id="content_6b60d222f" class="column-content" data-module="button">
+					
+				<div class="ce-button" data-align="center">
+					<div class="is-content" data-width="grid-width">
+						<a data-font="font_9egbh93i6" href="http://eunicejoung.com/about" target="_self">ABOUT EUNICE</a>
+					</div>
+				</div>
+			
+				</div>
+			
+					</div>
+				</div></div><div id="row_68c0116be" class="row"><div id="column_f150fe679" class="column mobile-order2 stacked-padding-top-1 mobile-text-center" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_74d9e2155" class="column-content" data-module="paragraph">
+					<div class="is-content"><div data-content-for="xl"><h5><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;" class="font_i6w8ye4fk">© 2018 EUNICE JOUNG</span></h5></div></div>
+				</div>
+			
+					</div>
+				</div><div id="column_d1a0e5d3f" class="column mobile-order1 mobile-text-center" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_5b2b5fa6d" class="column-content" data-module="button">
+					
+				<div class="ce-button" data-align="right">
+					<div class="is-content" data-width="auto">
+						<a data-font="font_i6w8ye4fk" href="mailto:hello@eunicejoung.com" target="_self">GET IN TOUCH →</a>
+					</div>
+				</div>
+			
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section>				
+				
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="pswp__bg"></div>
+	<div class="pswp__scroll-wrap">
+		<div class="pswp__container">
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+		</div>
+		<div class="pswp__ui pswp__ui--hidden">
+			<div class="pswp__top-bar">
+				<div class="pswp__counter"></div>
+				<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+				<button class="pswp__button pswp__button--share" title="Share"></button>
+				<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+				<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+				<div class="pswp__preloader">
+					<div class="pswp__preloader__icn">
+					  <div class="pswp__preloader__cut">
+						<div class="pswp__preloader__donut"></div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+				<div class="pswp__share-tooltip"></div> 
+			</div>
+			<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+			</button>
+			<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+			</button>
+			<div class="pswp__caption">
+				<div class="pswp__caption__center"></div>
+			</div>
+		</div>
+	</div>
+</div>	<div class="back-to-top" style="display: none; opacity: 1;">
+		<a class="semplice-event" data-event-type="helper" data-event="scrollToTop"><svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="53px" height="20px" viewBox="0 0 53 20" enable-background="new 0 0 53 20" xml:space="preserve">
+<g id="Ebene_3">
+</g>
+<g>
+	<polygon points="43.886,16.221 42.697,17.687 26.5,4.731 10.303,17.688 9.114,16.221 26.5,2.312 	"></polygon>
+</g>
+</svg>
+</a>
+	</div>
+	<script type="text/javascript">
+/* <![CDATA[ */
+var semplice = {"default_api_url":"http:\/\/eunicejoung.com\/wp-json","semplice_api_url":"http:\/\/eunicejoung.com\/wp-json\/semplice\/v1\/frontend","template_dir":"http:\/\/eunicejoung.com\/wp-content\/themes\/semplice4","category_base":"\/category\/","tag_base":"\/tag\/","nonce":"c4870fdc6e","frontend_mode":"static","static_transitions":"enabled","site_name":"Eunice Joung","base_url":"http:\/\/eunicejoung.com","frontpage_id":"2207","blog_home":"http:\/\/eunicejoung.com","blog_navbar":"","sr_status":"disabled","blog_sr_status":"enabled","is_preview":"","password_form":"\r\n<div class=\"post-password-form\">\r\n\t<div class=\"inner\">\r\n\t\t<form action=\"http:\/\/eunicejoung.com\/wp-login.php?action=postpass\" method=\"post\">\r\n\t\t\t<div class=\"password-lock\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"35\" height=\"52\" viewBox=\"0 0 35 52\">\r\n  <path id=\"Form_1\" data-name=\"Form 1\" d=\"M31.3,25.028H27.056a0.755,0.755,0,0,1-.752-0.757V14.654a8.8,8.8,0,1,0-17.608,0v9.616a0.755,0.755,0,0,1-.752.757H3.7a0.755,0.755,0,0,1-.752-0.757V14.654a14.556,14.556,0,1,1,29.111,0v9.616A0.755,0.755,0,0,1,31.3,25.028Zm-3.495-1.514h2.743V14.654a13.051,13.051,0,1,0-26.1,0v8.859H7.192V14.654a10.309,10.309,0,1,1,20.617,0v8.859Zm4.43,28.475H2.761A2.77,2.77,0,0,1,0,49.213V25.28a1.763,1.763,0,0,1,1.755-1.766H33.242A1.763,1.763,0,0,1,35,25.28V49.213A2.77,2.77,0,0,1,32.239,51.988ZM1.758,25.028a0.252,0.252,0,0,0-.251.252V49.213a1.259,1.259,0,0,0,1.254,1.262H32.239a1.259,1.259,0,0,0,1.254-1.262V25.28a0.252,0.252,0,0,0-.251-0.252H1.758ZM20.849,43h-6.7a0.75,0.75,0,0,1-.61-0.314,0.763,0.763,0,0,1-.1-0.682l1.471-4.44a4.1,4.1,0,1,1,5.184,0L21.563,42a0.763,0.763,0,0,1-.1.682A0.75,0.75,0,0,1,20.849,43ZM15.2,41.487H19.8l-1.319-3.979a0.76,0.76,0,0,1,.33-0.891,2.6,2.6,0,1,0-2.633,0,0.76,0.76,0,0,1,.33.891Z\"\/>\r\n<\/svg>\r\n<\/div>\r\n\t\t\t<p>This content is protected. <br \/><span>To view, please enter the password.<\/span><\/p>\r\n\t\t\t<div class=\"input-fields\">\r\n\t\t\t\t<input name=\"post_password\" class=\"post-password-input\" type=\"password\" size=\"20\" maxlength=\"20\" placeholder=\"Enter password\" \/><input type=\"submit\" name=\"Submit\" value=\"Submit\" \/>\t\t\t<\/div>\r\n\t\t<\/form>\r\n\t<\/div>\r\n<\/div>\r\n\r\n","portfolio_order":[2086,2024,1224,1230,2087,2243,2244],"gallery":{"prev":"<svg version=\"1.1\" id=\"Ebene_1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\"\n\twidth=\"18px\" height=\"40px\"  viewBox=\"0 0 18 40\" enable-background=\"new 0 0 18 40\" xml:space=\"preserve\">\n<g id=\"Ebene_2\">\n\t<g>\n\t\t<polygon points=\"16.3,40 0.3,20 16.3,0 17.7,1 2.5,20 17.7,39 \t\t\"\/>\n\t<\/g>\n<\/g>\n<\/svg>\n","next":"<svg version=\"1.1\" id=\"Ebene_1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\"\n\twidth=\"18px\" height=\"40px\" viewBox=\"0 0 18 40\" enable-background=\"new 0 0 18 40\" xml:space=\"preserve\">\n<g id=\"Ebene_2\">\n\t<g>\n\t\t<polygon points=\"0.3,39 15.5,20 0.3,1 1.7,0 17.7,20 1.7,40 \t\t\"\/>\n\t<\/g>\n<\/g>\n<\/svg>\n"},"sr_options":{"viewFactor":0.15,"distance":"70","easing":"ease","duration":"700","opacity":0,"scale":1,"mobile":"true"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Eunice Joung_files/frontend.min.js"></script>
+<script type="text/javascript" src="./Eunice Joung_files/wp-embed.min.js"></script>
+
+				<script type="text/javascript" id="2207-motion-js">
+					(function ($) { "use strict";window.sempliceAnimationsController = new ScrollMagic.Controller(); // create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#column_4or1qa11w",
+								triggerHook: ".3",
+								duration: "40%",
+							})
+							.setTween("#column_4or1qa11w", { opacity: "0" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#column_c25271924",
+								triggerHook: ".75",
+								duration: "50%",
+							})
+							.setTween("#column_c25271924", { opacity: "1",scale: "1" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#content_d6bd4f917",
+								triggerHook: "onEnter",
+								duration: "50%",
+							})
+							.setTween("#content_d6bd4f917", { opacity: "1",x: "0",y: "0" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#content_8d11083eb",
+								triggerHook: "onEnter",
+								duration: "50%",
+							})
+							.setTween("#content_8d11083eb", { opacity: "1",x: "0",y: "0" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#column_i2uky5928",
+								triggerHook: ".75",
+								duration: "50%",
+							})
+							.setTween("#column_i2uky5928", { opacity: "1",scale: "0.9" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#column_5a18ee92c",
+								triggerHook: ".75",
+								duration: "50%",
+							})
+							.setTween("#column_5a18ee92c", { opacity: "1",scale: "1" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#content_fa33c3a02",
+								triggerHook: "onEnter",
+								duration: "50%",
+							})
+							.setTween("#content_fa33c3a02", { opacity: "1",x: "0",y: "0" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#content_cade9ca0b",
+								triggerHook: "onEnter",
+								duration: "50%",
+							})
+							.setTween("#content_cade9ca0b", { opacity: "1",x: "0",y: "0" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#column_a1b832f2f",
+								triggerHook: ".75",
+								duration: "50%",
+							})
+							.setTween("#column_a1b832f2f", { opacity: "1",scale: "0.9" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#column_b31f67a2c",
+								triggerHook: ".75",
+								duration: "50%",
+							})
+							.setTween("#column_b31f67a2c", { opacity: "1",scale: "1" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#content_0c1d97270",
+								triggerHook: "onEnter",
+								duration: "50%",
+							})
+							.setTween("#content_0c1d97270", { opacity: "1",x: "0",y: "0" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#content_ef8949e39",
+								triggerHook: "onEnter",
+								duration: "50%",
+							})
+							.setTween("#content_ef8949e39", { opacity: "1",x: "0",y: "0" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#column_ff37c5f09",
+								triggerHook: ".75",
+								duration: "50%",
+							})
+							.setTween("#column_ff37c5f09", { opacity: "1",scale: "0.8" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#column_e5dddfdc9",
+								triggerHook: ".75",
+								duration: "50%",
+							})
+							.setTween("#column_e5dddfdc9", { opacity: "1",scale: "1" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				// create a scene
+					var scene = new ScrollMagic.Scene({
+								triggerElement: "#content_5e5b90f96",
+								triggerHook: "onEnter",
+								duration: "50%",
+							})
+							.setTween("#content_5e5b90f96", { opacity: "1",x: "0",y: "0" })
+							
+							
+							.addTo(window.sempliceAnimationsController);
+				$(window).on("scroll", function() { }); $(window).scroll();
+					$(document).on("mouseover", "#content_47ccf2a5d", function() {
+						TweenLite.to("#content_47ccf2a5d", 200 / 1000, {scale: "1.05",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+					$(document).on("mouseout", "#content_47ccf2a5d", function() {
+						TweenLite.to("#content_47ccf2a5d", 200 / 1000, {scale: "1",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+				
+					$(document).on("mouseover", "#content_f17c24aa0", function() {
+						TweenLite.to("#content_f17c24aa0", 200 / 1000, {scale: "0.95",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+					$(document).on("mouseout", "#content_f17c24aa0", function() {
+						TweenLite.to("#content_f17c24aa0", 200 / 1000, {scale: "0.9",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+				
+					$(document).on("mouseover", "#content_d279aa45c", function() {
+						TweenLite.to("#content_d279aa45c", 200 / 1000, {scale: "1.05",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+					$(document).on("mouseout", "#content_d279aa45c", function() {
+						TweenLite.to("#content_d279aa45c", 200 / 1000, {scale: "1",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+				
+					$(document).on("mouseover", "#content_99e1e25d8", function() {
+						TweenLite.to("#content_99e1e25d8", 200 / 1000, {scale: "0.95",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+					$(document).on("mouseout", "#content_99e1e25d8", function() {
+						TweenLite.to("#content_99e1e25d8", 200 / 1000, {scale: "0.9",backgroundColor: "transparent",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+				
+					$(document).on("mouseover", "#content_52245791b", function() {
+						TweenLite.to("#content_52245791b", 200 / 1000, {scale: "1.05",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+					$(document).on("mouseout", "#content_52245791b", function() {
+						TweenLite.to("#content_52245791b", 200 / 1000, {scale: "1",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+				
+					$(document).on("mouseover", "#content_939cd61f4", function() {
+						TweenLite.to("#content_939cd61f4", 200 / 1000, {scale: "1.05",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+					$(document).on("mouseout", "#content_939cd61f4", function() {
+						TweenLite.to("#content_939cd61f4", 200 / 1000, {scale: "1",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+				
+					$(document).on("mouseover", "#content_aaf64eb48", function() {
+						TweenLite.to("#content_aaf64eb48", 200 / 1000, {scale: "1.05",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+					$(document).on("mouseout", "#content_aaf64eb48", function() {
+						TweenLite.to("#content_aaf64eb48", 200 / 1000, {scale: "1",
+						ease: "Sine.easeInOut",
+						delay: "0",
+					});
+				
+					});
+				})(jQuery);
+				</script>
+			<script type="text/javascript" id="semplice-custom-javascript">document.getElementById('cover-2207').addEventListener('load', start_video);
+function start_video() {
+  var main_background_video = document.querySelector('section#cover-2207 video');
+  main_background_video.play();
+}</script>	
+</body></html>
